@@ -23,7 +23,7 @@ button {
 .responsive-image {
   width: 100%;
   height: auto;
-  max-width: 512px; /* Adjust as needed */
+  max-width: 512px;
 }
 
 /* Loading overlay */
