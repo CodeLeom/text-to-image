@@ -41,6 +41,13 @@ const ImageGenerator = () => {
     }
   };
 
+  const downloadImage = (format) => {
+    const link = document.createElement('a');
+    link.href = imageSrc;
+    link.download = `generated-image.${format}`;
+    link.click();
+  };
+
   return (
     <div className="App">
       {loading && (
@@ -62,6 +69,11 @@ const ImageGenerator = () => {
         <div>
           <h3>Generated Image</h3>
           <img src={imageSrc} alt="Generated Image" className="responsive-image" />
+          <div>
+            <button onClick={() => downloadImage('png')}>Download PNG</button>
+            <button onClick={() => downloadImage('jpeg')}>Download JPEG</button>
+          </div>
+          
         </div>
       )}
     </div>
